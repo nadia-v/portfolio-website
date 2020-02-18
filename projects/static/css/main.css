@@ -1,0 +1,70 @@
+body {
+    background: url('/static/brick.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .navbar-brand:hover {
+    text-decoration: underline;
+  }
+  /* .sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    background-color: rgb(17, 17, 17, 0.3); 
+    overflow-x: hidden;
+    padding-top: 100px;
+    padding-left: -40px;
+  } */
+  
+  /* .sidenav a {
+    padding: 50px 20px 8px 50px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  } */
+  
+/* .sidenav a img:hover {
+    box-shadow: 10px 10px 10px 10px #007bff;
+  } */
+
+.main {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+#about {
+  background-color: 	rgb(248, 249, 250, 0.70);
+
+}
+
+#mypicture img{
+  float: right;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+
+#myname {
+  margin-top: 100px;
+}
+
+#contact-me {
+  margin-top: 50px;
+  margin-bottom: 100px; 
+  padding-top: 30px;
+  background-color: 	rgb(248, 249, 250, 0.70);
+}
+
+#opacity {
+  background-color: 	rgb(248, 249, 250, 0);
+}
+
+#contact {
+  align-items: center;
+  background-color: 	rgb(248, 249, 250, 0);
+}

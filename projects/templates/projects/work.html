@@ -64,49 +64,32 @@
 
 <main role="main">
 
-{% for d in project.details.all %}
-    <!-- PROJECT PICTURE AND NAME -->
-    <div class="container">
-        <section class="jumbotron text-center" id="project-image">
-            <h1>{{ project.name }}</h1>       
-                <img src="{{ d.image.url }}" height=300>
-                <!-- <a href="{{ project.github }}"></a>
-                <p>{{ project.github }}</p> -->                
-                <p><a href="{% url 'work' %}">
-                    <button type="button" class="btn btn-md btn-outline-secondary" id="back">Back</button>
-                </a></p>
-        </section> 
-    </div>
-
-    <div class="container" id="project-details">
-        <p>{{ d.details }}</p>
-        <p></p>
-        <p>{{ d.tech }}</p>
-        <p></p>
-        <p><a href="{{ d.github }}">{{ d.github }}</a></p>
-    </div>
-
-
-    <!-- EXTRA IMAGES OF THE PROJECT -->
+  <div class="container" id="cards">
     <!-- <div class="album py-5 bg-light" > -->
-    <div class="container" id="project-pictures">
-        <div class="row">
-        {% for d in project.pictures.all %}
-            <div class="col-md-6">
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="card mb-6 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src="{{ d.picture.url }}">
-                    <div class="card-body">
-                        <p class="card-text">{{ d.screenshot_description }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-        </div>
-    </div>
-{% endfor %}
 
+      <div class="row">
+      {% for project in projects.all %}
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img class="bd-placeholder-img card-img-top" src="{{ project.image.url }}">
+          <div class="card-body">
+            <p class="card-text">{{ project.name }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                  <a href="{% url 'details' project.id %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  </a>
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+      </div>
+  </div>
 </main>
 
 <!-- <footer class="text-muted">

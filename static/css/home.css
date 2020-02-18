@@ -1,0 +1,47 @@
+body {
+    background: url('/static/brick.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .topnav-right{
+    color: #fff;
+    float: right;
+  }
+
+  .topnav-right a {
+    color: #fff;
+    padding: 20px;
+  }
+
+  .topnav-left {
+    float: left;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    margin-left:50px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(17, 17, 17, 0.3); 
+    overflow-x: hidden;
+    padding-top: 100px;
+  }
+  
+  .sidenav a {
+    padding: 50px 20px 8px 50px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+.sidenav a img:hover {
+    box-shadow: 10px 10px 10px 10px #007bff;
+    
+  }
