@@ -60,60 +60,16 @@
       </div>
     </header>
 
-
-<!-- CONTACT INFORMATION -->
-<!-- <div class="container" id="contact-me">
-    <section class="jumbotron text-center" id="opacity">
-  
-      <div class="row" id="contact">
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="mailto:nadiaveden@gmail.com">
-                <img src="{% static 'email.png' %}" width=50>
-                <p>Email</p>
-              </a>
-            </div>
-        </div>
-        <p>Send me a message at nadiaveden@gmail.com</p>
-      </div>
-
-      <div class="row" id="contact">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <a href="https://github.com/nadia-v">
-              <img src="{% static 'GitHub-Mark-120px-plus.png' %}" width=50>
-              <p>GitHub</p>
-            </a>
-          </div>
-        </div>
-        <p>Get to know me better by browsing through my nadia-v GitHub account</p>  
-      </div>
-  
-      <div class="row" id="contact">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <a href="https://www.linkedin.com/in/nadia-vedeneyeva-9396b1a9/">
-              <img src="{% static 'linkedin.png' %}" width=50>
-              <p>LinkedIn</p>
-            </a>
-          </div>
-        </div>
-        <p>Connect with me on LinkedIn</p>
-      </div>
-
-  <form role="form" action="" method="POST">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">Submit</button>
-      </form> 
-  </section>
-  
-  </div> -->
-
-
-
-
+    
     <div class="container">
+
+      <section class="text-center">
+        <div class="container response">
+          <h4>Thank you</h4>
+          <p>Your massage was sent successfully</p>
+        </div>
+      </section>
+
       <div class="row d-flex justify-content-center">
         <div class="card mb-4 shadow-sm" id="logo">
           <a href="mailto:nadiaveden@gmail.com">
@@ -142,16 +98,16 @@
 
 
   
-      <div class="container" id="contact-me-2">
-        <form role="form" action="" method="POST">
-          {% csrf_token %}
-          <!-- <input type="text" class="form-control" id="colFormLabel" placeholder="Name" name="name">             -->
-          <input type="email" class="form-control" id="colFormLabel" placeholder="Enter email" name="sender">
-          <input type="text" class="form-control" id="colFormLabel" placeholder="Subject" name="subject">
-          <textarea type="text" class="form-control" id="colFormLabel" placeholder="Your message" name="message"></textarea>
-          <button type="submit" class="btn btn-md btn-outline-secondary" id="submit">Submit</button>
-        </form>
-      </div>
+    <div class="container" id="contact-me-2">
+      <form role="form" action="" method="POST">
+        {% csrf_token %}
+        <!-- <input type="text" class="form-control" id="colFormLabel" placeholder="Name" name="name">             -->
+        <input type="email" class="form-control" id="colFormLabel" placeholder="Enter email" name="sender">
+        <input type="text" class="form-control" id="colFormLabel" placeholder="Subject" name="subject">
+        <textarea type="text" class="form-control" id="colFormLabel" placeholder="Your message" name="message"></textarea>
+        <button type="submit" class="btn btn-md btn-outline-secondary" id="submit">Submit</button>
+      </form>
+    </div>
  
 
 

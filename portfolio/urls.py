@@ -27,7 +27,7 @@ urlpatterns = [
     path('temp', projects.views.temp, name='temp'),
     path('contact', projects.views.contact, name='contact'),
     path('projects', projects.views.work, name='work'),
-    path('resume', projects.views.resume, name='resume'),
+    path('resume', projects.views.resume, name='resume')
 ] 
 
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
