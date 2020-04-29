@@ -1,94 +1,16 @@
 <!doctype html>
 <html lang="en">
+{% extends "projects/frame.html" %}
 {% load static %}
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>Nadia Vedeneyeva</title>
+{% block page_content %}
 
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">   
-    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-
-  </head>
-  <body>
-
-    <!-- NAVIGATION BAR -->
-    <!-- <header>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">Contact</a>
-               
-          <div class="navbar-brand d-flex">
-              <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-left">Home</a>
-              <a href="{% url 'about' %}" class="navbar-brand d-flex align-items-left">About</a>
-              <a href="#" class="navbar-brand d-flex align-items-left">Projects</a>
-              <a href="#" class="navbar-brand d-flex align-items-left">Resume</a>
-          </div>
-
-        </div>
+  <!-- WELCOME ANIMATION -->
+  <section class="text-center">
+      <div class="container" id="welcome">
+          <span class="text1">WELCOME</span>
+          <span class="text2" id="name">My name is Nadia..</span>
       </div>
-    </header> -->
+  </section>
 
-    <header>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <a href="{% url 'contact' %}" class="navbar-brand d-flex align-items-center">Contact</a>
-                
-          <div class="d-flex">
-              <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-left">Home</a>
-              <a href="{% url 'about' %}" class="navbar-brand d-flex align-items-left">About</a>
-              <a href="{% url 'work' %}" class="navbar-brand d-flex align-items-left">Projects</a>
-              <a href="{% url 'resume' %}" class="navbar-brand d-flex align-items-left">Resume</a>
-          </div>
-
-        </div>
-      </div>
-    </header>
-
-    <!-- WELCOME ANIMATION -->
-    <section class="text-center">
-        <div class="container" id="welcome">
-            <span class="text1">WELCOME</span>
-            <span class="text2" id="name">My name is Nadia..</span>
-            <!-- <span class="text3">..and I am a Software Engineer</span> -->
-        </div>
-    </section>
-   
-</body>
-
-<script src="{% static 'jquery-3.4.1.min.js' %}"></script>
-<script src="{% static 'popper.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% endblock %}
 </html>
