@@ -1,5 +1,5 @@
 body {
-    background: url('/static/brick.jpg') no-repeat center center fixed;
+    background: url('/static/static_images/brick.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -7,7 +7,6 @@ body {
 }
 
 #page {
-  max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -16,28 +15,111 @@ body {
   text-decoration: underline;
 }
 
-.main {
-  margin-top: 50px;
+#welcome {
+  z-index: -2;
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width:100%;
+}
+
+.container span {
+  color: #212529;
+  display: block;
+}
+
+.text1 {
+  text-transform: uppercase;
+  color: #212529;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: text 5s 1;
+} 
+
+.text2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #212529;
+  animation: name 4.8s 1;
+}
+
+.text3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #212529;
+}
+
+@keyframes text {
+  0%{
+      color: #212529;
+      margin-bottom: -40%;
+  }
+  30%{
+      letter-spacing: 30px;
+      margin-bottom: -40%;
+  }
+  85%{
+      letter-spacing: 8px;
+      margin-bottom: -40%;
+  }
+} 
+
+@keyframes name{
+  0%{
+      color: #212529;
+      opacity: 0;
+  }
+  90%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+.container.about {
+  background-color: 	rgb(248, 249, 250, 0.70);
   margin-bottom: 100px;
 }
 
-.container.main.container.about-image {
-  margin-top: 50px;
+.container.about section {
+  padding: 40px;
 }
 
-#about {
-  background-color: 	rgb(248, 249, 250, 0.70);
+.container.response {
+  width: 500px;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: 	rgb(248, 249, 250);
+}
 
+.container.response p{
+  align-content: center;
+  float: center;
+}
+
+.container.about-me-header {
+  top: 50px;
+  position: relative;
+  min-height:500px;
 }
 
 #mypicture img{
   float: right;
   margin-bottom: 50px;
   margin-right: 50px;
+  max-height: 400px;
+
 }
 
 #myname {
   margin-top: 100px;
+  padding-left: 50px;
 }
 
 #contact-me {
@@ -88,9 +170,104 @@ body {
   width: 80px;
   align-items: center;
   text-align: center;
-  background-color: 	rgb(248, 249, 250, 0.00);
+  background-color: 	rgb(248, 249, 250, 0.70);
 }
 
 #logo:hover {
   background-color: rgb(248, 249, 250);
 }
+
+#cards {
+  margin-top: 50px;
+  margin-bottom: 100px; 
+  padding-top: 30px;
+  background-color: 	rgb(248, 249, 250, 0.70);
+}
+
+#project-image {
+  margin-top: -20px;
+  margin-bottom: -100px;
+  background-color: rgb(248, 249, 250, 0);
+}
+
+#back {
+  background-color: #343a40;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#back:hover {
+  background-color: rgb(248, 249, 250);
+  color: black;
+}
+
+#project-details {
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom:30px;
+  background-color: 	rgb(248, 249, 250, 0.70);
+}
+
+#project-pictures {
+  margin-top: 10px;
+  margin-bottom: 100px; 
+  padding: 20px;
+  background-color: 	rgb(248, 249, 250, 0.70);
+}
+
+ @media screen and (max-width: 1200px) {
+  .container.about-me-header {
+    top: 30;
+    display: inline-block;
+    position: relative;
+  }
+  #myname h1{
+    font-size: 2.3em;
+  }
+  #mypicture img {
+    height: 380px;
+  }
+} 
+
+@media screen and (max-width: 992px) {
+  .container.about-me-header {
+    top: 10;
+    display: inline-block;
+    position: relative;
+  }
+  #myname h1{
+    font-size: 2em;
+  }
+  #mypicture img {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container.about-me-header {
+    top: 10;
+    display: inline-block;
+    position: relative;
+  }
+  #myname h1{
+    font-size: 1.5em;
+  }
+  #mypicture img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+    .container.about-me-header {
+    top: 10;
+    display: inline-block;
+    position: relative;
+  }
+  #myname h1{
+    font-size: 1em;
+  }
+  #mypicture img {
+    height: 250px;
+  }  
+} 
