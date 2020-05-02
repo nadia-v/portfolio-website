@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_HOST_USER = 'nadia.portfolio.page@gmail.com'
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'myportfoliodb',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': os.environ['DATABASE_PASSWORD'],
         'HOST': 'localhost',
         'PORT': '5432',
     }
